@@ -1,7 +1,7 @@
 package com.tg.practice.model2;
 
+import java.util.Collection;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -60,7 +60,7 @@ public abstract class Empleado {
 	private Integer sueldo;
 
 	@ManyToMany
-	private Set<Sucursal> sucursalesHabilitadas;
+	private Collection<Sucursal> sucursalesHabilitadas;
 
 	public Long getId() {
 		return id;
@@ -150,22 +150,27 @@ public abstract class Empleado {
 		this.sueldo = sueldo;
 	}
 
-	public Set<Sucursal> getSucursalesHabilitadas() {
+	public Collection<Sucursal> getSucursalesHabilitadas() {
 		return sucursalesHabilitadas;
 	}
 
-	public void setSucursalesHabilitadas(Set<Sucursal> sucursalesHabilitadas) {
+	public void setSucursalesHabilitadas(Collection<Sucursal> sucursalesHabilitadas) {
 		this.sucursalesHabilitadas = sucursalesHabilitadas;
-	}
-
-	public void agregarSucursal(Sucursal sucursal) {
-		this.sucursalesHabilitadas.add(sucursal);
 	}
 
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer("Empleado : ").append(id).append("   ").append(nombre).append("   ")
 				.append(apellido).append("   ").append(dni).append("   ").append(fechaNacimiento).append("   ");
+		return sb.toString();
+	}
+	
+	public String toStringSiete() {
+		StringBuffer sb = new StringBuffer("Empleado : ")
+				.append(nombre).append("   ")
+				.append(apellido).append("   ")
+				.append(puesto.getNombre()).append("   ")
+				.append(sucursalesHabilitadas);
 		return sb.toString();
 	}
 

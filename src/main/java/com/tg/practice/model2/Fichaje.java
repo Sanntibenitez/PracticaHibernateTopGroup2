@@ -100,8 +100,16 @@ public class Fichaje {
 
 	@Override
 	public String toString() {
-		StringBuffer sb = new StringBuffer("Fichaje : ").append(id).append("   ").append(empleado.getNombre())
-				.append("   ").append(ingreso);
+		StringBuffer sb = new StringBuffer("Fichaje : ")
+				.append(id).append("   ")
+				.append(empleado.getNombre()).append("   ")
+				.append(empleado.getApellido()).append("   ")
+				.append(egreso).append("   ")
+				.append(ingreso).append("   ")
+				.append(tipoFichaje).append("   ")
+				.append(sucursal.getLocalidad().getNombre()).append("   ")
+				.append(sucursal.getDescripcion()).append("   ")
+				.append(empleado.getPuesto().getNombre()).append("  ");
 		return sb.toString();
 	}
 

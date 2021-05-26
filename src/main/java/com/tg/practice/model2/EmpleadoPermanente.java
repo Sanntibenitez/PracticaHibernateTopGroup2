@@ -26,5 +26,12 @@ public class EmpleadoPermanente extends Empleado {
 	public void setCantidadHijos(Integer cantidadHijos) {
 		this.cantidadHijos = cantidadHijos;
 	}
+	
+	@Override
+	public String toString() {
+		
+		return super.toString() + this.getCantidadHijos();
+		
+	}
 
 }

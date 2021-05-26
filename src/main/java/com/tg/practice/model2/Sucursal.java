@@ -93,7 +93,14 @@ public class Sucursal {
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer("Sucursal : ").append(id).append("   ").append(direccion).append("   ")
-				.append(nomenclador).append("   ").append(descripcion).append("");
+				.append(nomenclador).append("   ").append(descripcion).append(" ").append(localidad.getNombre()).append("");
+		return sb.toString();
+	}
+	
+	public String toStringSiete() {
+		StringBuffer sb = new StringBuffer("Sucursal : ")
+				.append(descripcion).append("")
+				.append(localidad.getNombre()).append("");
 		return sb.toString();
 	}
 
