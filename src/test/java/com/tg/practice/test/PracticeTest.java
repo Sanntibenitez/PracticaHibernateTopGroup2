@@ -136,9 +136,7 @@ public class PracticeTest {
 		Date fechaNacimiento = Utils.StringToDate("06-12-1989 17:03:00");
 		Date fechaIngreso = Utils.StringToDate("16-05-2021 09:00:00");
 		Date fechaEgreso = Utils.StringToDate("16-05-2022 09:00:00");
-
-		// Creo un Set de sucursales habilitadas para luego agregarselo al nuevo
-		// empleado
+		
 		Set<Sucursal> sucursalesHabilitdas = new HashSet<Sucursal>();
 		sucursalesHabilitdas.add(sucursalE);
 		sucursalesHabilitdas.add(sucursalB);
